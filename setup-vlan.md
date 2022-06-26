@@ -11,11 +11,12 @@ Edit file /etc/netplan/00-installer-config.yaml
   - `````network:`````
   - &ensp;`````ethernets:`````
   - &ensp;&ensp;`````ens160: {}`````
-  - &ensp;&ensp;`````vlans:`````
-  - &ensp;&ensp;&ensp;`````ens192.101:`````
-  - &ensp;&ensp;&ensp;&ensp;`````id: 101`````
-  - &ensp;&ensp;&ensp;&ensp;`````link: ens192`````
-  - &ensp;&ensp;&ensp;&ensp;`````addresses: [10.101.1.10/24]`````
+  - &ensp;&ensp;`````ens192: {}`````
+  - &ensp;`````vlans:`````
+  - &ensp;&ensp;`````vlan.101:`````
+  - &ensp;&ensp;&ensp;`````id: 101`````
+  - &ensp;&ensp;&ensp;`````link: ens192`````
+  - &ensp;&ensp;&ensp;`````addresses: [10.101.1.10/24]`````
 
 NOTES: YAML file is sensitive to space. Each block in YAML is separated by 2 spaces, so make sure you write it as above
 
