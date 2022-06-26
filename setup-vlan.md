@@ -8,7 +8,7 @@ In case we have ens160 and ens192. ens192 as trunk interface and we will add new
 Edit file /etc/netplan/00-installer-config.yaml
 - Adjust as below
   - `````network:`````
-  - `````&nbsp;&nbsp;ethernets:`````
+  - &ensp;`````ethernets:`````
   - `````&nbsp;&nbsp;&nbsp;&nbsp;ens160: {}`````
   - `````&nbsp;&nbsp;&nbsp;&nbsp;vlans:`````
   - `````&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ens192.101:`````
