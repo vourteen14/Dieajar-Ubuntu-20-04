@@ -9,14 +9,14 @@ Edit file /etc/netplan/00-installer-config.yaml
 - Adjust as below
   - `````network:`````
   - &ensp;`````ethernets:`````
-  - `````&nbsp;&nbsp;&nbsp;&nbsp;ens160: {}`````
-  - `````&nbsp;&nbsp;&nbsp;&nbsp;vlans:`````
-  - `````&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ens192.101:`````
-  - `````&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id: 101`````
-  - `````&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link: ens192`````
-  - `````&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;addresses: [10.101.1.10/24]`````
+  - &ensp;&ensp;`````ens160: {}`````
+  - &ensp;&ensp;`````vlans:`````
+  - &ensp;&ensp;&ensp;`````ens192.101:`````
+  - &ensp;&ensp;&ensp;&ensp;`````id: 101`````
+  - &ensp;&ensp;&ensp;&ensp;`````link: ens192`````
+  - &ensp;&ensp;&ensp;&ensp;`````addresses: [10.101.1.10/24]`````
 
-NOTES: YAML file is sensitive to space
+NOTES: YAML file is sensitive to space. Each block in YAML is separated by 2 spaces, so make sure you write it as above
 
 Restart netplan
 - `````sudo netplan apply`````
